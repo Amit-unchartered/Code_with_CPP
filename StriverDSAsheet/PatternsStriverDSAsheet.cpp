@@ -307,7 +307,7 @@ void pattern18(int n) {
 int main() { 
     int n;
     cin >> n;
-
+    //Call different functions to print different patterns
     pattern18(n);
 
 }
