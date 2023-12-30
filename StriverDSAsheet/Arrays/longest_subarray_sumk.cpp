@@ -1,3 +1,4 @@
+//optimal solution if numbers in array are 0 or positive
 #include<bits/stdc++.h>
 using namespace std;
 
