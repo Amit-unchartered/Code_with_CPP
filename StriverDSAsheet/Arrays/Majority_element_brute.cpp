@@ -1,18 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int majority_element(vector<int> &arr){
-    int n = arr.size();
+int majority_element(vector<int>v){
+    int n = v.size();
 
     for(int i=0; i<n; i++) {
         int cnt = 0;
         for(int j=0; j<n; j++) {
-            if(arr[j] == arr[i]){
+            if(v[j] == v[i]){
                 cnt++;
             }
             //if(cnt>n/2) return cnt; //returns the count of the majority element
         }
-        if(cnt > n/2) return arr[i];
+        if(cnt > (n/2)) 
+        return v[i];
     }
     return -1;
 }
@@ -21,8 +22,8 @@ int main()
 {
     int n; cin >> n;
     vector<int>arr(n);
-    for(auto it:arr){
-        cin >> it;
+    for(int i = 0; i < n; i++){
+        cin >> arr[i];
     }
 
     int ans = majority_element(arr);
