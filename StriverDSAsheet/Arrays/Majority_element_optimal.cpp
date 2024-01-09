@@ -7,6 +7,7 @@ int majorityElement(vector<int>& v) {
     int el; // Element
 
     //applying the algorithm:
+    //again applying the algorithm
     for (int i = 0; i < n; i++) {
         if (cnt == 0) {
             cnt = 1;
