@@ -17,4 +17,17 @@ vector<int> superiorElements(vector<int>&a) {
     return ans; //total TC --> O(N)+O(NlogN)
 }
 
-int main(){}
+int main(){
+    int n; cin >> n;
+    vector<int>permutation(n);
+    for(int i = 0; i < n; i++){
+        cin >> permutation[i];
+    }
+
+    vector<int> ans = superiorElements(permutation);
+
+    for(auto it:ans) {
+        cout << it << " ";
+    }
+    cout << endl;
+}
