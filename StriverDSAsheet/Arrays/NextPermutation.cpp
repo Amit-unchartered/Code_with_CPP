@@ -29,5 +29,16 @@ vector<int> nextPermutation(vector<int> &permutation, int n)
 }
 
 int main(){
+    int n; cin >> n;
+    vector<int>permutation(n);
+    for(int i = 0; i < n; i++){
+        cin >> permutation[i];
+    }
 
+    vector<int> ans = nextPermutation(permutation, n);
+
+    for(auto it:ans) {
+        cout << it << " ";
+    }
+    cout << endl;
 }
