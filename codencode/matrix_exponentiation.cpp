@@ -18,17 +18,18 @@
 const int mod = 1e9+7;
 
 using namespace std;
-int ar[N][N], I[N][N];
+lli ar[N][N], I[N][N];
 
 //THIS IS SIMPLE MATRIX MULTIPLICATION
-void mul(int A[][N], int B[][N], int dim){
+void mul(lli A[][N], lli B[][N], int dim){
     lli res[dim+1][dim+1];
 
     REP(i,dim){
         REP(j,dim){
             res[i][j] = 0;
             REP(k, dim){
-                res[i][j] = (res[i][j]+A[i][k]*B[k][j])%mod;
+                lli x = (A[i][k]*B[k][j])%mod;
+                res[i][j] = (res[i][j]+x)%mod;
             }
         }
     }
@@ -41,7 +42,7 @@ void mul(int A[][N], int B[][N], int dim){
 }
 
 //IMP --> when we pass a 2d matrix to a function then we need to specify the number of columns otherwise it will throw error.
-void power(int A[][N], int dim, int n){
+void power(lli A[][N], int dim, int n){
     REP(i, dim) REP(j, dim){
         if(i == j){
             I[i][j] = 1;
@@ -67,7 +68,7 @@ void power(int A[][N], int dim, int n){
     }
 }
 
-void printMat(int A[][N], int dim){
+void printMat(lli A[][N], int dim){
     REP(i, dim){
         REP(j, dim){
             cout << A[i][j] << ' ';
