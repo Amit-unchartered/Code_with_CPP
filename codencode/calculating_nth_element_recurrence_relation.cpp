@@ -18,7 +18,7 @@ F(1)=0, F(2)=1
 if it depends on previous k terms then it would be of size k*k
 
 [f1 f2]*[a b] = [f2 f3]  --> on solving a=0, b=3, c=1, d=2
-         [c d]
+        [c d]
 */
 
 #include<bits/stdc++.h>
@@ -57,7 +57,7 @@ lli getfib(int n){
     I[1][1] = I[2][2] = 1;
     I[1][2] = I[2][1] = 0;
 
-    T[1][0] = 1;
+    T[1][1] = 0;
     T[1][2] = T[2][1] = T[2][2] = 1;
 
     n = n-1;
