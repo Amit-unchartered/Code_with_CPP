@@ -1,0 +1,1 @@
+{"name":"Local: prime_factorization_using_sieve","url":"f:\\Code_with_CPP\\codencode\\prime_factorization_using_sieve.cpp","tests":[{"id":1707040697877,"input":"30","output":"2 2 3 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Code_with_CPP\\codencode\\prime_factorization_using_sieve.cpp","group":"local","local":true}
