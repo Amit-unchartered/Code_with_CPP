@@ -23,6 +23,7 @@ if it depends on previous k terms then it would be of size k*k
 
 #include<bits/stdc++.h>
 using namespace std;
+#define REP(i,n) for (int i=1; i<=n; i++)
 #define pb push_back
 #define ff first
 #define ss second
@@ -42,12 +43,18 @@ void mul(lli A[3][3], lli B[3][3], int dim){
     for(int i=1; i<=dim; i++){
         for(int j=1; j<=dim; j++){
             res[i][j]=0;
-            for(int k=0; k<=dim; k++){
+            for(int k=1; k<=dim; k++){
                 //res[i][j] += A[i][k]*B[k][j];
-                lli x = (A[i][k]*B[k][j])%mod;
+                lli x = (A[i][k]*B[k][j])%mod; //since fibonacci numbers grow exponentially
                 res[i][j] = (res[i][j]+x)%mod;
             }
         } 
+    }
+
+    REP(i, dim){
+        REP(j, dim){
+            A[i][j] = res[i][j];
+        }
     }
 }
 
@@ -64,19 +71,21 @@ lli getfib(int n){
 
     while(n){
         if(n%2){
-            mul(I,T,2); n--;
+            mul(I,T,2); n--; //ultimately the answer is stored in I only
         }else{
             mul(T,T,2); n/=2;
         } 
     }
+
+    lli Fn = (ar[1]*I[1][1]+ar[2]*I[2][1])%mod;
+    return Fn;
 }
 
 int main(){
     int t, n;
     cin >> t;
     while(t--){
-        cin >> ar[0] >> ar[1] >> n;
-        n++;
+        cin >> ar[1] >> ar[2] >> n, n++;
         cout << getfib(n) << endl;
     }
 }
