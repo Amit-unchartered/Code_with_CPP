@@ -104,6 +104,8 @@ Node* removeEl(Node* head, int el){
     return head;
 }
 
+
+
 int main()
 {
     vector<int> arr = {12, 5, 8, 6};
@@ -111,7 +113,9 @@ int main()
     //head = removesHead(head);
     //head = removeTail(head);
     //head = removeK(head, 3);
-    head = removeEl(head, 8);
+    //head = removeEl(head, 8);
+    //head = Inserthead(head, 100);
+    //head = insertTail(head, 100);
+    
     print(head);
-    return 0;
 }
