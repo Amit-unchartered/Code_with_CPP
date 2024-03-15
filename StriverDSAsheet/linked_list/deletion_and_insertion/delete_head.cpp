@@ -61,23 +61,23 @@ Node* removeTail(Node* head){
 Node* removeK(Node* head, int k){
     if(head == NULL) return head;
     if(k == 1){
-        Node* temp = head;
+        Node* tmp = head;
         head = head->next;
-        free(temp);
+        delete tmp;
         return head;
     }
     int cnt = 0;
-    Node* temp = head;
     Node* prev = NULL;
-    while(temp != NULL){
+    Node* tmp = head;
+    while(tmp != NULL){
         cnt++;
         if(cnt == k){
             prev->next = prev->next->next;
-            free(temp);
+            free(tmp);
             break;
         }
-        prev = temp;
-        temp = temp->next;
+        prev = tmp;
+        tmp = tmp->next;
     }
     return head;
 }
