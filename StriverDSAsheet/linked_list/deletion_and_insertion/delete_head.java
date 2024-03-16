@@ -56,7 +56,7 @@ public class delete_head {
     private static Node removeK(Node head, int k){
         if(head == null) return head;
         if(k == 1){
-            Node temp = head;
+            //Node temp = head;
             head = head.next;
             //free(temp);
             return head;
