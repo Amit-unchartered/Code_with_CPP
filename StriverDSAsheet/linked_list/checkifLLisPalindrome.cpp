@@ -62,6 +62,9 @@ bool checkifPalindrome(Node* head){
     Node* slow = head;
     Node* fast = head;
     while(fast->next != NULL && fast->next->next != NULL){
+        slow = slow->next;
+        fast = fast->next->next;
+    }
         Node* newHead = reversingLLrecursive(slow->next);
 
         Node* first = head;
@@ -76,10 +79,10 @@ bool checkifPalindrome(Node* head){
                 second = second->next;
             }
         }
-    }
     reversingLLrecursive(slow->next); //reverse the LL to original as we don't want to tamper the data.
     return true;
-}
+    }
+    
 
 void print(Node* head){
     while(head != NULL){
