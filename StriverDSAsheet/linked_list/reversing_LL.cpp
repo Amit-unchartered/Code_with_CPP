@@ -69,7 +69,7 @@ Node* reversingLLOptimal(Node* head){
         Node* front = tmp->next;
         tmp->next = prev;
         prev = tmp;
-        tmp = tmp->next;
+        tmp = front;
     }
     return head;
 }
