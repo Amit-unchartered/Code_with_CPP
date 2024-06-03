@@ -1,0 +1,1 @@
+{"name":"Local: 1980A","url":"f:\\Code_with_CPP\\Codeforces\\1980A.cpp","tests":[{"id":1717426289089,"input":"3\n10 1\nBGECDCBDED\n10 2\nBGECDCBDED\n9 1\nBBCDEFFGG","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Code_with_CPP\\Codeforces\\1980A.cpp","group":"local","local":true}
