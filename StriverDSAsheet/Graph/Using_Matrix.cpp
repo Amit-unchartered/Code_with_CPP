@@ -14,3 +14,6 @@ int main()
     } 
     return 0;
 }
+
+//for weighted graph
+//adj[u][v] = weight;
