@@ -26,8 +26,9 @@ private:
           } 
       }
   }
-    
-public:
+    //TC --> O(n*m)
+    //sc --> o(n*m)
+    public:
     vector<vector<char>> fill(int n, int m, vector<vector<char>> mat)
     {
         // code here
