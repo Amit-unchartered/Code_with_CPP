@@ -1,5 +1,5 @@
 //only valid in directed acyclic graph
-
+//TC --> O(v+e)
 //{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,10 +1,13 @@
 //Insert all nodes with indegree 0
 //Take them out of the queue and reduce indegree of the adjacent nodes
 //{ Driver Code Starts
+
+//TC --> o(v+e)
 #include <bits/stdc++.h>
 using namespace std;
 
 // } Driver Code Ends
+//bfs is used not dfs
 class Solution
 {
     private:
